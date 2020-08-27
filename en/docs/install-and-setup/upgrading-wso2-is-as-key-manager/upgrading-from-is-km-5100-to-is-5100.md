@@ -10,7 +10,7 @@ The following information describes how to upgrade your **WSO2 API Manager (WSO2
     -   WSO2 API-M 3.2.0 supports **both WSO2 IS 5.10.0 and WSO2 IS as KM 5.10.0** as its resident key manager.
 
 -   [Step 1 - Setup IS as Key Manager 5.10.0 with API-M 3.2.0](#step-1-setup-is-km)
--   [Step 2 - Upgrade API Manager 3.0.0 to 3.2.0](#step-2-upgrade-api-manager)    
+-   [Step 2 - Upgrade API Manager 3.1.0 to 3.2.0](#step-2-upgrade-api-manager)    
 
 ## Step 1 - Setup IS as Key Manager 5.10.0 with API-M 3.2.0 
 
@@ -157,7 +157,7 @@ Follow the steps mentioned in [Upgrading API-M from 3.1.0 to 3.2.0]({{base_path}
         type = "WSO2-IS"
         ```
 
-        -  Do NOT copy anyother Key Manager specific configurations coming from previous API-M version to the latest pointing to the IS instance.
+        -  Do NOT copy any other Key Manager specific configurations coming from previous API-M version to the latest pointing to the IS instance.
 
     - After configuring WSO2 IS or WSO2 IS as KM 5.10.0 as the **Resident Key Manager** and before starting the API-M 3.2.0 server for the first time in **Step 5** under [Step 2 - Upgrade API Manager to 3.2.0]({{base_path}}/install-and-setup/upgrading-wso2-api-manager/upgrading-from-310-to-320/#step-2-upgrade-api-manager-to-320), make sure you have already started WSO2 IS or IS as KM 5.10.0.
 
@@ -173,9 +173,9 @@ Follow the steps mentioned in [Upgrading API-M from 3.1.0 to 3.2.0]({{base_path}
 
 From WSO2 API-M 3.2.0 onwards, you DO NOT necessarily need to share the databases among WSO2 API-M and IS. 
 
--   In this case where WSO2 IS is treated as the resident key manager, API-M no longer handle the management of identity data in `WSO2AM_DB` and IS no longer handle the API management data in `WSO2AM_DB`. 
+-   In this case where WSO2 IS is treated as the resident key manager, API-M no longer handles the management of identity data in `WSO2AM_DB` and IS no longer handles the API management data in `WSO2AM_DB`. 
 -   The registry data in `WSO2REG_DB` can be separately managed by both WSO2 API-M and IS.
 -   Depending on your requirement, you can share or separately manage the user management data in `WSO2USER_DB` 
 or in any other user store among WSO2 API-M and IS.
 
-So after successfully doing the migration, you can take a copy of each of the databases and separately configure them with WSO2 API-M 3.2.0 and IS/IS as KM 5.10.0. Make sure, you take backup of each of the databases before doing this.
+So after successfully completing the migration, you can take a copy of each of the databases and separately configure them with WSO2 API-M 3.2.0 and IS/IS as KM 5.10.0. Make sure you take backup of each of the databases before doing this.
